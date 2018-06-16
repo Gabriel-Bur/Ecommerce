@@ -1,6 +1,7 @@
 ﻿using Ecommerce.Domain.Entities;
 using System.Data.Entity.ModelConfiguration;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.Infrastructure.Annotations;
 
 namespace Ecommerce.Infra.Data.EntityCofig
 {
@@ -14,6 +15,9 @@ namespace Ecommerce.Infra.Data.EntityCofig
 
 
             //ProductCode
+            HasIndex(p => p.ProductCode)
+                .IsUnique();
+
             Property(p => p.ProductCode)
                 .IsRequired()
                 .HasColumnType("varchar")
@@ -21,9 +25,6 @@ namespace Ecommerce.Infra.Data.EntityCofig
 
 
             //ProductName      
-            HasIndex(p => p.ProductName)
-                .IsUnique();
-
             Property(p => p.ProductName)
                 .IsRequired()
                 .HasColumnType("varchar")

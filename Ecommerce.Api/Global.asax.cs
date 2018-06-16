@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using AutoMapper;
+using Ecommerce.Api.Models;
+using Ecommerce.Domain.Entities;
 using System.Web.Http;
-using System.Web.Routing;
+
 
 namespace Ecommerce.Api
 {
@@ -12,6 +11,14 @@ namespace Ecommerce.Api
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
+
+            Mapper.Initialize(x =>
+            {
+                x.CreateMap<Product, ModelProduct>();
+                x.CreateMap<ModelProduct, Product>();
+            });
+
+            
         }
     }
 }
