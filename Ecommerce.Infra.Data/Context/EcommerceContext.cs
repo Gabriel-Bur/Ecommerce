@@ -26,7 +26,6 @@ namespace Ecommerce.Infra.Data.Context
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-
             modelBuilder.Configurations.Add(new ProductConfig());
 
         }

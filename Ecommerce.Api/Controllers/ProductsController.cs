@@ -1,32 +1,50 @@
 ﻿using AutoMapper;
 using Ecommerce.Api.Models;
+using Ecommerce.Application.Interface;
 using Ecommerce.Domain.Entities;
-using Ecommerce.Infra.Data.Repositories;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
+
 
 namespace Ecommerce.Api.Controllers
 {
+ 
+    
+    [RoutePrefix("api/products")]
     public class ProductsController : ApiController
     {
 
-        private readonly ProductRepository _product = new ProductRepository();
+        private readonly IProductAppService _productApp;
 
-        // GET: api/Products
-        public IHttpActionResult Get()
+        public ProductsController(IProductAppService productApp)
         {
-            var products = Mapper.Map<IEnumerable<Product>, IEnumerable<ModelProduct>>(_product.GetAll());
+            _productApp = productApp;
+        }
+
+        [HttpGet]
+        [Route("page/{id:int=0}")]
+        public IHttpActionResult GetPaged(int id)
+        {
+            var products = Mapper.Map<IEnumerable<Product>, IEnumerable<ModelProduct>>(_productApp.GetPaged(id));
+
             return Ok(products);
         }
 
+
+        // GET: api/Products
+        public IHttpActionResult GetAll()
+        {
+            var products = Mapper.Map<IEnumerable<Product>, IEnumerable<ModelProduct>>(_productApp.GetAll());
+            return Ok(products);
+        }
+
+
+        [HttpGet]
+        [Route("{id:int}")]
         // GET: api/Products/5
         public IHttpActionResult Get(int id)
         {
-            var product = Mapper.Map<Product, ModelProduct>(_product.GetById(id));
+            var product = Mapper.Map<Product, ModelProduct>(_productApp.GetById(id));
 
             if (product == null)
             {
@@ -37,6 +55,8 @@ namespace Ecommerce.Api.Controllers
 
         }
 
+
+
         [HttpPost]
         // POST: api/Products
         public IHttpActionResult Post(ModelProduct product)
@@ -46,7 +66,7 @@ namespace Ecommerce.Api.Controllers
                 try
                 {
                     var productToAdd = Mapper.Map<ModelProduct, Product>(product);
-                    _product.Add(productToAdd);
+                    _productApp.Add(productToAdd);
 
 
                     return Ok(productToAdd);
@@ -63,20 +83,55 @@ namespace Ecommerce.Api.Controllers
             }
         }
 
+
+
+        [Route("{id:int}")]
         // PUT: api/Products/5
-        public void Put(int id, [FromBody]string value)
+        public IHttpActionResult Put(int id, ModelProduct product)
         {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var productToUpdate = Mapper.Map<ModelProduct, Product>(product);
+                    _productApp.Update(productToUpdate);
 
-            //to do
+
+                    return Ok(productToUpdate);
+                }
+                catch
+                {
+                    return InternalServerError();
+                }
+
+            }
+            else
+            {
+                return BadRequest(ModelState);
+            }
 
         }
 
+
+
+        [HttpDelete]
+        [Route("{id:int}")]
         // DELETE: api/Products/5
-        public void Delete(int id)
+        public IHttpActionResult Delete(int id)
         {
 
-            //to do
+            var product = _productApp.GetById(id);
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            _productApp.Remove(product);
+
+            return Ok(product);
 
         }
+
     }
 }

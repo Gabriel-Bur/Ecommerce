@@ -31,9 +31,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Entities\Product.cs" />
-    <Compile Include="Interfaces\IProductRepository.cs" />
-    <Compile Include="Interfaces\IRespository.cs" />
+    <Compile Include="Interfaces\Repositories\IProductRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IRespositoryBase.cs" />
+    <Compile Include="Interfaces\Services\IProductService.cs" />
+    <Compile Include="Interfaces\Services\IServiceBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ProdutoService.cs" />
+    <Compile Include="Services\ServiceBase.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

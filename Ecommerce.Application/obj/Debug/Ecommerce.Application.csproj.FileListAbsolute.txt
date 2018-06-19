@@ -1,0 +1,9 @@
+C:\Users\cx750\Desktop\Ecommerce\Ecommerce.Application\bin\Debug\Ecommerce.Application.dll
+C:\Users\cx750\Desktop\Ecommerce\Ecommerce.Application\bin\Debug\Ecommerce.Application.pdb
+C:\Users\cx750\Desktop\Ecommerce\Ecommerce.Application\bin\Debug\Ecommerce.Domain.dll
+C:\Users\cx750\Desktop\Ecommerce\Ecommerce.Application\bin\Debug\Ecommerce.Domain.pdb
+C:\Users\cx750\Desktop\Ecommerce\Ecommerce.Application\obj\Debug\Ecommerce.Application.csprojAssemblyReference.cache
+C:\Users\cx750\Desktop\Ecommerce\Ecommerce.Application\obj\Debug\Ecommerce.Application.csproj.CoreCompileInputs.cache
+C:\Users\cx750\Desktop\Ecommerce\Ecommerce.Application\obj\Debug\Ecommerce.Application.csproj.CopyComplete
+C:\Users\cx750\Desktop\Ecommerce\Ecommerce.Application\obj\Debug\Ecommerce.Application.dll
+C:\Users\cx750\Desktop\Ecommerce\Ecommerce.Application\obj\Debug\Ecommerce.Application.pdb
