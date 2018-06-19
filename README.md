@@ -1,21 +1,22 @@
 ## Ecommerce Web Api .NET
 
 
-# URL
+## URL
 http://localhost:XXXXX/api/Products
 
-# Method:
+## Method:
 |GET|POST|PUT|DELETE
 
-# Type:
+## Return format
 JSON is default
 
--JSON
-  ~/api/Products{?type=json}
--XML
-  ~/api/Products{?type=xml}
+*JSON*
+~/api/Products{?type=json}
 
-# URL Params
+*XML*
+~/api/Products{?type=xml}
+
+## URL Params
 Optional:{}
 
 
@@ -28,7 +29,7 @@ DELETE: ~/api/Products/id
 
 
 
-# URL Filter
+## URL Filter
 is CaseSensitive
 
 Exemple:
@@ -56,6 +57,6 @@ Exemple:
   "Brand":"Vezpa"}
 ]
 ```
-##Filters Exemples:
+## Filters Exemples:
 
-![Odata uri table](https://github.com/Gabriel-Bur/Ecommerce/exemples/1.jpg
+![Odata uri table](https://github.com/Gabriel-Bur/Ecommerce/1.jpg
