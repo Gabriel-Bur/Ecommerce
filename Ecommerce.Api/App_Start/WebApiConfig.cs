@@ -20,6 +20,9 @@ namespace Ecommerce.Api
                 defaults: new { id = RouteParameter.Optional }
             );
 
+
+            config.EnableQuerySupport();
+
             GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Clear();
             
             GlobalConfiguration.Configuration.Formatters.JsonFormatter.MediaTypeMappings.Add(

@@ -4,7 +4,7 @@ using Ecommerce.Application.Interface;
 using Ecommerce.Domain.Entities;
 using System.Collections.Generic;
 using System.Web.Http;
-
+using System.Web.Http.OData.Query;
 
 namespace Ecommerce.Api.Controllers
 {
@@ -22,6 +22,7 @@ namespace Ecommerce.Api.Controllers
         }
 
         [HttpGet]
+        [Queryable(AllowedQueryOptions=AllowedQueryOptions.Filter)]
         [Route("page/{id:int=0}")]
         public IHttpActionResult GetPaged(int id)
         {
@@ -31,6 +32,7 @@ namespace Ecommerce.Api.Controllers
         }
 
 
+        [Queryable(AllowedQueryOptions = AllowedQueryOptions.Filter)]
         // GET: api/Products
         public IHttpActionResult GetAll()
         {
