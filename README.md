@@ -24,7 +24,9 @@ GET :   ~/api/Products/{id}
         ~/api/Products/{page}/{Number}
         
 POST:   ~/api/Products
+
 PUT :   ~/api/Products/id
+
 DELETE: ~/api/Products/id
 
 
@@ -59,4 +61,4 @@ Exemple:
 ```
 ## Filters Exemples:
 
-![Odata uri table](https://github.com/Gabriel-Bur/Ecommerce/1.jpg
+![Odata uri table](https://github.com/Gabriel-Bur/Ecommerce/blob/master/1.jpg)
