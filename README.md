@@ -21,17 +21,17 @@ Optional:{ }
 
 
 GET :
-**~/api/Products/{id}**
-**~/api/Products/{page}/{Number}**
+- **~/api/Products/{id}**
+- **~/api/Products/{page}/{Number}**
         
 POST:   
-**~/api/Products**
+- **~/api/Products**
 
 PUT :
-**~/api/Products/id**
+- **~/api/Products/id**
 
 DELETE: 
-**~/api/Products/id**
+- **~/api/Products/id**
 
 
 
