@@ -15,24 +15,24 @@ namespace Ecommerce.Infra.Data.EntityCofig
 
 
             //ProductCode
-            HasIndex(p => p.ProductCode)
+            HasIndex(p => p.Code)
                 .IsUnique();
 
-            Property(p => p.ProductCode)
+            Property(p => p.Code)
                 .IsRequired()
                 .HasColumnType("varchar")
-                .HasMaxLength(10);
+                .HasMaxLength(5);
 
 
             //ProductName      
-            Property(p => p.ProductName)
+            Property(p => p.Name)
                 .IsRequired()
                 .HasColumnType("varchar")
                 .HasMaxLength(100);
 
 
             //ProductDescription
-            Property(p => p.ProductDescription)
+            Property(p => p.Description)
                 .IsRequired()
                 .HasColumnType("varchar")
                 .HasMaxLength(100);
@@ -40,7 +40,7 @@ namespace Ecommerce.Infra.Data.EntityCofig
 
 
             //ProductCategory
-            Property(p => p.ProductCategory)
+            Property(p => p.Category)
                 .IsRequired()
                 .HasColumnType("varchar")
                 .HasMaxLength(100);
@@ -48,7 +48,7 @@ namespace Ecommerce.Infra.Data.EntityCofig
 
 
             //ProductImageURL
-            Property(p => p.ProductImageURL)
+            Property(p => p.ImageURL)
                 .IsRequired()
                 .HasColumnType("varchar")
                 .HasMaxLength(2000);
@@ -56,12 +56,12 @@ namespace Ecommerce.Infra.Data.EntityCofig
 
 
             //ProductPrice
-            Property(p => p.ProductPrice)
+            Property(p => p.Price)
                 .IsRequired();
 
 
             //ProductBrand
-            Property(p => p.ProductBrand)
+            Property(p => p.Brand)
                 .IsRequired()
                 .HasColumnType("varchar")
                 .HasMaxLength(100);

@@ -1,6 +1,0 @@
-C:\Users\cx750\Desktop\Ecommerce\Ecommerce.Domain\bin\Debug\Ecommerce.Domain.dll
-C:\Users\cx750\Desktop\Ecommerce\Ecommerce.Domain\bin\Debug\Ecommerce.Domain.pdb
-C:\Users\cx750\Desktop\Ecommerce\Ecommerce.Domain\obj\Debug\Ecommerce.Domain.csprojAssemblyReference.cache
-C:\Users\cx750\Desktop\Ecommerce\Ecommerce.Domain\obj\Debug\Ecommerce.Domain.csproj.CoreCompileInputs.cache
-C:\Users\cx750\Desktop\Ecommerce\Ecommerce.Domain\obj\Debug\Ecommerce.Domain.dll
-C:\Users\cx750\Desktop\Ecommerce\Ecommerce.Domain\obj\Debug\Ecommerce.Domain.pdb

@@ -10,19 +10,19 @@ namespace Ecommerce.Domain.Entities
     {
         public int Id { get; set; }
 
-        public string ProductCode { get; set; }
+        public string Code { get; set; }
 
-        public string ProductName { get; set; }
+        public string Name { get; set; }
 
-        public string ProductDescription { get; set; }
+        public string Description { get; set; }
 
-        public string ProductCategory { get; set; }
+        public string Category { get; set; }
 
-        public string ProductImageURL { get; set; }
+        public string ImageURL { get; set; }
 
-        public decimal ProductPrice { get; set; }
+        public decimal Price { get; set; }
 
-        public string ProductBrand { get; set; }
+        public string Brand { get; set; }
 
     }
 }
