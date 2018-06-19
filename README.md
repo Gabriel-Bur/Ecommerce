@@ -17,22 +17,31 @@ JSON is default
 ~/api/Products{?type=xml}
 
 ## URL Params
-Optional:{}
+Optional:{ }
 
 
-GET :   ~/api/Products/{id}
-        ~/api/Products/{page}/{Number}
+GET :
+**~/api/Products/{id}**
+**~/api/Products/{page}/{Number}**
         
-POST:   ~/api/Products
+POST:   
+**~/api/Products**
 
-PUT :   ~/api/Products/id
+PUT :
+**~/api/Products/id**
 
-DELETE: ~/api/Products/id
+DELETE: 
+**~/api/Products/id**
 
 
 
 ## URL Filter
 is CaseSensitive
+
+?$filter=(Property) XX (Value)
+
+
+
 
 Exemple:
 
